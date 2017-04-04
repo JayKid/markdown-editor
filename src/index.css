@@ -3,3 +3,22 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+main {
+    display: flex;
+    min-height: 100vw;
+}
+
+.editor, .preview {
+  flex: 1;
+}
+
+.editor {
+  display: flex;
+  border-right: 1px solid grey;
+}
+
+textarea {
+  flex: 1;
+  border: none;
+}

@@ -12,10 +12,10 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Markdown Editor</h2>
         </div>
-        <div className="App-intro">
+        <main>
           <Editor />
           <Preview />
-        </div>
+        </main>
       </div>
     );
   }

@@ -21,10 +21,12 @@ class Editor extends Component {
 
   render() {
     return (
-      <textarea
-        onChange={this.handleChange}
-        value={this.props.contents}
-        placeholder="Write here your markdown.."></textarea>
+      <div className="editor">
+        <textarea
+          onChange={this.handleChange}
+          value={this.props.contents}
+          placeholder="Write here your markdown.."></textarea>
+      </div>
     )
   }
 }

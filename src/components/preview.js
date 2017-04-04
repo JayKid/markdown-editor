@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+let marked = require('marked');
 
 class Preview extends Component {
 
   render() {
-    const contents = this.props.contents;
+    const markdownPreview = marked(this.props.contents);
     return (
-      <div className="Preview">
-        <p>{contents}</p>
+      <div className="preview">
+        <div dangerouslySetInnerHTML={{ __html: markdownPreview }}></div>
       </div>
     );
   }
