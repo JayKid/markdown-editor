@@ -1,6 +1,6 @@
-import cart from './cart';
+import editor from './editor';
 import { combineReducers } from 'redux';
 const rootReducer = combineReducers({
-    cart
+    editor
 });
 export default rootReducer;

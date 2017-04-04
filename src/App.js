@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Cart from './components/cart';
+import Preview from './components/preview';
+import Editor from './components/editor';
 import logo from './logo.svg';
 import './App.css';
 
@@ -9,10 +10,11 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+          <h2>Markdown Editor</h2>
         </div>
         <div className="App-intro">
-          <Cart />
+          <Editor />
+          <Preview />
         </div>
       </div>
     );
