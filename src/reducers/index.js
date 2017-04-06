@@ -1,6 +1,15 @@
-import editor from './editor';
-import { combineReducers } from 'redux';
-const rootReducer = combineReducers({
-    editor
-});
-export default rootReducer;
+const initialState = {
+  contents: ""
+}
+
+export default(state = initialState, payload) => {
+    switch (payload.type) {
+        case 'uploadContents':
+        case 'updateContents':
+            return {
+              contents: payload.contents
+            };
+        default:
+            return state;
+    }
+};

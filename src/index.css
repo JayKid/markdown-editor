@@ -12,6 +12,14 @@ header {
     padding: 2rem;
 }
 
+.uploader {
+  display: flex;
+  justify-content: center;
+  background: grey;
+  color: white;
+  padding: 1rem;
+}
+
 main {
     display: flex;
     min-height: 100vw;

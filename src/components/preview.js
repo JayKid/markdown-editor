@@ -16,7 +16,7 @@ class Preview extends Component {
 
 function mapStateToProps(state, props) {
     return {
-        contents: state.editor
+        contents: state.contents
     };
 }
 
