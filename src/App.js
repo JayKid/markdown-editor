@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Preview from './components/preview';
 import Editor from './components/editor';
-import Uploader from './components/uploader';
+import FileOpener from './components/fileOpener';
+import FileSaver from './components/fileSaver';
 
 class App extends Component {
   render() {
@@ -10,7 +11,10 @@ class App extends Component {
         <header>
           <h1>Markdown Editor</h1>
         </header>
-        <Uploader />
+        <div className="action-bar">
+          <FileOpener />
+          <FileSaver />
+        </div>
         <main>
           <Editor />
           <Preview />
