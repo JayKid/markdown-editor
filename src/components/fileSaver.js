@@ -8,7 +8,7 @@ class FileSaver extends Component {
     this.saveToFile = this.saveToFile.bind(this);
   }
 
-  saveToFile = _ => {
+  saveToFile() {
     const fileProperties = {
       fileName: 'myfile.md',
       contentType: 'text/plain'
@@ -21,7 +21,7 @@ class FileSaver extends Component {
 
     let document = window.document;
     let anchor = document.createElementNS("http://www.w3.org/1999/xhtml", "a");
-    const blob = new Blob([this.props.contents], { type: fileProperties.contentType} );
+    const blob = new Blob([this.props.contents], { type: fileProperties.contentType } );
     anchor.href = URL.createObjectURL(blob);
     anchor.download = fileProperties.fileName;
     triggerClickOn(anchor);
