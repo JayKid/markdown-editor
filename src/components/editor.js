@@ -6,15 +6,10 @@ import * as editorActions from '../actions/editor';
 class Editor extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      contents: ""
-    };
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange = event => {
-    // React event weirdness requires storing
-    // the synthetic event
+  handleChange(event) {
     const textareaContents = event.target.value;
     this.props.action.updateContents(textareaContents);
   }
