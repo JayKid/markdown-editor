@@ -10,7 +10,7 @@ class FileSaver extends Component {
 
   saveToFile() {
     const fileProperties = {
-      fileName: 'myfile.md',
+      fileName: `${this.props.fileName}`,
       contentType: 'text/plain'
     };
 
@@ -39,6 +39,7 @@ class FileSaver extends Component {
 
 function mapStateToProps(state, props) {
     return {
+        fileName: state.currentlyOpenFile.fileName,
         contents: state.currentlyOpenFile.contents
     };
 }

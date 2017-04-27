@@ -19,8 +19,12 @@ class FileOpener extends Component {
     let fileReader = new FileReader();
 
     fileReader.onload = function (event) {
+      const fileName = this.fileUploaderInput.files[0].name;
       const fileContents = event.srcElement.result;
-      this.props.action.openFileContents(fileContents);
+      this.props.action.openFileContents({
+        fileName: fileName,
+        fileContents: fileContents
+      });
     }.bind(this);
 
     fileReader.onerror = function () {
@@ -33,7 +37,7 @@ class FileOpener extends Component {
     return (
       <div className="uploader">
         <h2>Open File</h2>
-        <input type="file" onChange={this.handleChange} />
+        <input type="file" onChange={this.handleChange} ref={(input) => { this.fileUploaderInput = input; }}/>
       </div>
     )
   }

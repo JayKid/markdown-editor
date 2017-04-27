@@ -11,7 +11,9 @@ class Editor extends Component {
 
   handleChange(event) {
     const textareaContents = event.target.value;
-    this.props.action.updateContents(textareaContents);
+    this.props.action.updateContents({
+      fileContents: textareaContents
+    });
   }
 
   render() {
