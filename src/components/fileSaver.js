@@ -39,7 +39,7 @@ class FileSaver extends Component {
 
 function mapStateToProps(state, props) {
     return {
-        contents: state.contents
+        contents: state.currentlyOpenFile.contents
     };
 }
 

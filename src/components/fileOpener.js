@@ -22,7 +22,7 @@ class FileOpener extends Component {
       const fileContents = event.srcElement.result;
       this.props.action.openFileContents(fileContents);
     }.bind(this);
-    
+
     fileReader.onerror = function () {
       window.alert('Sorry, there was an error opening your file');
     };
@@ -39,14 +39,9 @@ class FileOpener extends Component {
   }
 }
 
-function mapStateToProps(state, props) {
-    return {
-        contents: state.contents
-    };
-}
 function mapDispatchToProps(dispatch) {
     return {
         action: bindActionCreators(fileOpenerActions, dispatch)
     };
 }
-export default connect(mapStateToProps, mapDispatchToProps)(FileOpener);
+export default connect(null, mapDispatchToProps)(FileOpener);
