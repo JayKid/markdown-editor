@@ -30,7 +30,7 @@ class Editor extends Component {
 
 function mapStateToProps(state, props) {
     return {
-        contents: state.currentlyOpenFile.contents
+        contents: state.files[state.currentlyOpenFile].fileContents
     };
 }
 function mapDispatchToProps(dispatch) {

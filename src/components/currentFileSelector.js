@@ -14,7 +14,7 @@ class CurrentFileSelector extends Component {
 
 function mapStateToProps(state, props) {
     return {
-        fileName: state.currentlyOpenFile.fileName
+        fileName: state.files[state.currentlyOpenFile].fileName
     };
 }
 

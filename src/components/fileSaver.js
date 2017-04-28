@@ -39,8 +39,9 @@ class FileSaver extends Component {
 
 function mapStateToProps(state, props) {
     return {
-        fileName: state.currentlyOpenFile.fileName,
-        contents: state.currentlyOpenFile.contents
+        fileName: state.files[state.currentlyOpenFile].fileName,
+        contents: state.files[state.currentlyOpenFile].fileContents
+
     };
 }
 
