@@ -14,11 +14,26 @@ html, body {
 
 .file-selector {
   display: inline-block;
-  background: #383636;
+  background: #c18be0;
   padding: 0.5rem 1rem;
   color: white;
-  border-top-left-radius: 0.7rem;
-  border-top-right-radius: 0.7rem;
+  border-top-left-radius: 0.4rem;
+  border-top-right-radius: 0.4rem;
+  transform: perspective(4px) rotateX(1deg);
+}
+.file-selector p {
+  margin: 0;
+  padding: 0;
+  transform: perspective(4px) rotateX(-1deg);
+}
+
+.file-selector.active {
+  background: #7f45a0;
+}
+
+.file-selector:hover {
+  background: #7f45a0;
+  cursor: pointer;
 }
 
 .action-bar {
@@ -29,7 +44,7 @@ html, body {
   flex: 1;
   display: flex;
   justify-content: center;
-  background: grey;
+  background: #ab68d2;
   color: white;
   padding: 1rem;
   flex-direction: column;

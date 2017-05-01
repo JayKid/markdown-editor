@@ -6,7 +6,9 @@ class CurrentFileSelector extends Component {
   render() {
     return (
       <ul className="file-selector-container">
-        <li className="file-selector">{this.props.fileName}</li>
+        <li className="file-selector">
+          <p>{this.props.fileName}</p>
+        </li>
       </ul>
     )
   }
