@@ -1,4 +1,4 @@
-import reducer from './index'
+import reducer from '../../src/reducers/index'
 
 describe('reducer', () => {
   it('should return the initial state', () => {
