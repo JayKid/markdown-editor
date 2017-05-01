@@ -2,11 +2,14 @@ import * as actions from './FileOpener'
 
 describe('actions', () => {
   it('should create an action to open a file', () => {
-    const text = 'Random markdown contents of opened file';
+    const fileProperties = {
+      fileName: 'Readme.md',
+      fileContents: 'random markdown from a file'
+    };
     const expectedAction = {
       type: 'openFileContents',
-      contents: text
+      contents: fileProperties
     };
-    expect(actions.openFileContents(text)).toEqual(expectedAction);
+    expect(actions.openFileContents(fileProperties)).toEqual(expectedAction);
   });
 });
