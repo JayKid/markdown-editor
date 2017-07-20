@@ -1,4 +1,4 @@
-import * as actions from '../../src/actions/Editor'
+import * as actions from '../../src/actions/editor'
 
 describe('actions', () => {
   it('should create an action to update the contents of the currently open file', () => {

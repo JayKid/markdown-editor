@@ -1,4 +1,4 @@
-import * as actions from '../../src/actions/FileOpener'
+import * as actions from '../../src/actions/fileOpener'
 
 describe('actions', () => {
   it('should create an action to open a file', () => {
